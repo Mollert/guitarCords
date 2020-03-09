@@ -21,7 +21,7 @@ if (document.body.offsetWidth < 544) {
 	railWidth = document.body.offsetWidth - 32;
 	document.getElementById("theRail").style.width = (railWidth / 16) + "rem";	
 	availableTravel = railWidth - 80;
-	travelWidth = (railWidth + 1) / 16;
+	travelWidth = (railWidth - 64) / 16;
 }
 
 document.getElementById("theSlider").addEventListener("mousedown", (event) => {
