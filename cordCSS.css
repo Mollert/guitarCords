@@ -1,0 +1,130 @@
+
+@font-face { src: url("./asset/coolvetica.ttf"); font-family: cool; }
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: cool;
+}
+
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.noteDisplay {
+	margin-top: 2rem;
+}
+
+#whichNote {
+	font-size: 6rem;
+}
+
+#tempoText {
+	font-size: 2rem;
+}
+
+#theNumber {
+	font-size: 4rem;
+	text-decoration: underline;
+}
+
+#theRail {
+	margin: 2rem 0;
+	width: 32rem;
+	height: 1rem;
+	background-color: gainsboro;
+	border-radius: 0.2rem;
+	position: relative;
+}
+
+#theSlider {
+	width: 3em;
+	height: 4rem;
+	background-color: black;
+	border-radius: 0.4rem;
+	position: absolute;
+	top: -1.5rem;
+	left: 1rem;
+}
+
+#ticToc {
+	font-size: 2rem;
+}
+
+#ttOn {
+	opacity: 0.5;
+}
+
+#ttOn:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#ttOn:hover ~ #ttOff {
+	opacity: 0.5;
+}
+
+#ttOff:hover {
+	cursor: pointer;
+}
+
+#inputButtons {
+	margin: 1rem 0;	
+}
+
+.commands {
+	width: 10rem;
+	height: 3.2rem;
+	margin: 1rem 1rem;
+	font-size: 1.6rem;
+	background-color: gainsboro;
+	border-radius: 0.4rem;
+	color: black;
+	font-weight: bold;
+}
+
+.commands:hover {
+	background-color: black;
+	color: white;
+}
+
+#toScales a {
+	font-size: 1.8rem;
+	color: black;
+}
+
+#toScales a:hover {
+	opacity: 0.5;
+}
+
+/* Guitar Scales Page */
+
+.theIntro {
+	font-size: 2.4rem;
+	text-decoration: underline;
+}
+
+.theNotes {
+	margin: 0.6rem 0 2rem 0;	
+	font-size: 2rem;
+}
+
+.scaleID {
+	margin-top: 0.6rem;
+	font-size: 2rem;
+}
+
+/*
+@media screen and (max-width: 400px) {
+}
+*/

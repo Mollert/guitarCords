@@ -1,2 +1,1 @@
-# guitarCords
-A site that shows random guitar cords for practice.  Also shows
+A site to practice guitar with.  It shows random guitar cords, metronome, and basic scales.
