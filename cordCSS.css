@@ -98,30 +98,13 @@ html, body {
 	color: white;
 }
 
-#toScales a {
+.toOthers a {
 	font-size: 1.8rem;
 	color: black;
 }
 
-#toScales a:hover {
+.toOthers a:hover {
 	opacity: 0.5;
-}
-
-/* Guitar Scales Page */
-
-.theIntro {
-	font-size: 2.4rem;
-	text-decoration: underline;
-}
-
-.theNotes {
-	margin: 0.6rem 0 2rem 0;	
-	font-size: 2rem;
-}
-
-.scaleID {
-	margin-top: 0.6rem;
-	font-size: 2rem;
 }
 
 /*

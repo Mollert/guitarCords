@@ -4,8 +4,9 @@ const cordData = [
 	["A7", "./image/cordA7.png"],
 	["Am", "./image/cordAm.png"],
 	["Am7", "./image/cordAm7.png"],
-	["B", "./image/cordB.png"],	
+	["B", "./image/cordB.png"],
 	["B7", "./image/cordB7.png"],
+	["Bm", "./image/cordBm.png"],
 	["Bm7", "./image/cordBm7.png"],
 	["C", "./image/cordC.png"],
 	["C7", "./image/cordC7.png"],
@@ -34,7 +35,7 @@ const metronome = new Audio("./asset/metronomeTicToc.wav");
 let play = 0;  // One equals true
 
 const getCord = () => {
-	cord = Math.floor(Math.random() * 23);
+	cord = Math.floor(Math.random() * 24);
 }
 
 const checkMatch = (note) => {

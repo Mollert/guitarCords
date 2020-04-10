@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>F major guitar scale</title>
+	
+	<meta name="description" content="Review notes and practice finger pattern for basic scales.">
+	
+	<link rel="shortcut icon" href="./asset/cordFavicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" href="cordCSS.css">
+
+	<style>
+		.scaleID { margin-top: 0.6rem; font-size: 2rem; }
+		
+		#scaleContainer { width: 19rem; height: 34rem; position: relative; }
+
+		#scaleImage { width: 100%; height: auto; }
+
+		.note { width: 3.1rem; height: 3.1rem; position: absolute; }
+
+		.openText { font-size: 1.6rem; width: 4rem; height: 8rem; position: absolute; }
+
+		#noteF1 { left: -0.2rem; top: 2.2rem; } 
+
+		#noteG { left: -0.2rem; top: 14rem; }
+
+		#noteAs { left: 3rem; top: 2.2rem; }
+
+		#noteC { left: 3rem; top: 14rem; }
+
+		#noteE { left: 6.4rem; top: 7.8rem; }
+
+		#noteF2 { left: 6.4rem; top: 14rem; }
+
+		#openA { left: 0.2rem; top: 25.4rem; text-align: right; }
+
+		#openD { left: 8.5rem; top: 25.4rem; }
+
+		#timing { margin: 1rem 0; }
+ 
+		#tempoIntro { font-size: 1.6rem; padding-right: 0.6rem; }
+
+		#tempo { width: 5rem; height: 4.6rem; font-size: 3.2rem;  text-align: center; border-radius: 30%; }
+
+		#tempo:hover { background-color: gainsboro; cursor: pointer; }		
+
+		#arrowsCase { width: 2rem; height: 4.6rem; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+
+		.arrow { width: 2rem; height: 2rem; border-radius: 30%; }
+
+		.arrow:hover { cursor: pointer; background-color: gainsboro; }
+
+		.commands { margin: 0 0 0 0; }
+
+	</style>
+
+</head>
+<body>
+
+	<div class="noteDisplay flexColumn">
+
+		<div class="scaleID">F major Scale</div>
+		<div class="scaleID">Start on the first fret</div>
+
+		<div id="scaleContainer">
+			<img id="scaleImage" class="scale" src="./image/scales/scaleFMtotal.png" alt="A blank scale">
+			<img id="noteF1" class="note" src="./image/scales/dotF.png" alt="F1 note">
+			<img id="noteG" class="note" src="./image/scales/dotG.png" alt="G note">
+			<div id="openA" class="openText">Play open string "A"</div>
+			<img id="noteAs" class="note" src="./image/scales/dotAs.png" alt="A# note">
+			<img id="noteC" class="note" src="./image/scales/dotC.png" alt="C note">
+			<div id="openD" class="openText">Play open string "D"</div>
+			<img id="noteE" class="note" src="./image/scales/dotE.png" alt="E note">
+			<img id="noteF2" class="note" src="./image/scales/dotF.png" alt="F2 note">
+		</div>
+
+		<div id="timing" class="flexRow">
+			<div id="tempoIntro">Set the tempo:</div>
+			<div id="tempo">40</div>
+			<div id="arrowsCase">
+				<img id="upArrow" class="arrow" src="./image/upArrow.png" alt="Up Arrow">		
+				<img id="downArrow" class="arrow" src="./image/downArrow.png" alt="Down Arrow">
+			</div>
+		</div>
+
+		<input type="button" id="runStop" class="commands" name="runStop" value="Start/Stop">
+
+	</div>
+
+	<script>
+		
+		const noteDataFM = [
+			["noteF1", "./image/scales/scaleFMnone.png", "./asset/notes/f6th.wav"],
+			["noteG", "./image/scales/scaleFMnone.png", "./asset/notes/g.wav"],
+			["openA", "./image/scales/scaleFMa.png", "./asset/notes/aOpen.wav"],
+			["noteAs", "./image/scales/scaleFMnone.png", "./asset/notes/aSharp.wav"],
+			["noteC", "./image/scales/scaleFMnone.png", "./asset/notes/c.wav"],
+			["openD", "./image/scales/scaleFMd.png", "./asset/notes/dOpen.wav"],
+			["noteE", "./image/scales/scaleFMnone.png", "./asset/notes/e.wav"],
+			["noteF2", "./image/scales/scaleFMnone.png", "./asset/notes/f3rd.wav"]
+		];
+
+		let cycle = 0;
+		let run = true;
+		let notePlay = 0;
+		let direction = "forward";
+		// This function shows basic scale and hides all notes in order to start with clean slate
+		const begin = () => {
+			document.getElementById("scaleImage").src = "./image/scales/scaleFMnone.png";
+			noteDataFM.forEach((tone) => {
+				document.getElementById(tone[0]).style.visibility = "hidden";				
+			});
+		}
+		// This function projects correct scale, turns on correct note and plays the correct note
+		const playNote = (whichNote) => {
+			document.getElementById("scaleImage").src = noteDataFM[whichNote][1];
+			document.getElementById(noteDataFM[whichNote][0]).style.visibility = "visible";
+			new Audio(noteDataFM[whichNote][2]).play();
+		}
+		// This funciton hides previously shown note for a number of reasons
+		const hideNote = (theNote) => {
+			document.getElementById(noteDataFM[theNote][0]).style.visibility = "hidden";			
+		}
+		// Main function that cycles forward and backward through notes
+		const cycleNotes = () => {
+			switch (cycle) {
+				case 0:
+					if (direction === "backward") {
+						playNote(cycle);
+						hideNote(cycle+1);
+						direction = "pause";					
+					} else if (direction === "pause") {
+						hideNote(cycle);
+						direction = "forward";
+					} else {
+						playNote(cycle);
+						cycle++;
+					}
+					break;
+				case 1:
+				case 2:		
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+					if (direction === "backward") {
+						hideNote(cycle+1);
+					}										
+				case 7:
+					playNote(cycle);
+					if (direction === "forward") {
+						hideNote(cycle-1);
+						cycle++;
+					} else {
+						cycle--;
+					}
+					break;
+				case 8:
+					hideNote(cycle-1);				
+					direction = "backward";
+					cycle--;
+					break;
+				default:
+					break;
+			}
+		}
+
+
+		// Single button to start and stop dispaly
+		// Process will contiune where it left off when start is clicked after stop
+		document.getElementById("runStop").addEventListener("click", () => {
+			if (run) {
+				begin();
+				let tempo = document.getElementById("tempo").textContent;
+				tempo = (60 / tempo) * 1000;
+				notePlaying = setInterval(cycleNotes, tempo);
+				run = false;
+			} else {
+				clearInterval(notePlaying);
+				run = true;
+			}
+		});
+
+			let clickNow = 0;
+			let clickPast = 0;
+			let clickDiff = 0;
+			let goingUp = 0;
+			let goingDown = 0;
+		// Adding and subtracting to the tempo
+		// Increase by one and quicker clicks increase by 10
+		document.getElementById("upArrow").addEventListener("click", (event) => {
+			clickNow = parseInt(event.timeStamp);
+			clickDiff = clickNow - clickPast;
+			goingUp = document.getElementById("tempo").textContent;			
+			if (clickDiff > 400) {
+				goingUp++;
+			} else {
+				goingUp = parseInt(goingUp) + 10;
+			}
+			clickPast = clickNow;
+			document.getElementById("tempo").textContent = goingUp;
+		});
+
+		document.getElementById("downArrow").addEventListener("click", (event) => {
+			clickNow = parseInt(event.timeStamp);
+			clickDiff = clickNow - clickPast;
+			goingDown = document.getElementById("tempo").textContent;
+			if (clickDiff > 400) {			
+				goingDown--;
+			} else {
+				goingDown = parseInt(goingDown) - 10;
+			}
+			clickPast = clickNow;
+			document.getElementById("tempo").textContent = goingDown;
+		});
+
+	</script>
+
+</body>
+</html>

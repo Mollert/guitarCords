@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Guitar neck notes</title>
+	
+	<meta name="description" content="Review notes and practice finger pattern for basic scales.">
+	
+	<link rel="shortcut icon" href="./asset/cordFavicon.ico" type="image/x-icon">
+
+	<style>
+
+		@font-face { src: url("./asset/coolvetica.ttf"); font-family: cool; }
+
+		html, body { margin: 0; padding: 0; font-family: cool; }
+
+		.noteDisplay { margin-top: 2rem;  font-size: 1.6rem;}
+
+		.flexColumn { display: flex; flex-direction: column; align-items: center; }
+
+		.flexRow { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; }
+
+		.theIntro { margin: 1.4rem 0 0.8rem 0; font-size: 2rem; text-decoration: underline; text-align: center; }
+	
+		.openStrings { font-size: 1.8rem; text-align: center; }
+
+		.spacing { margin-left: 1rem; letter-spacing: 0.9rem; }
+
+		#neckContainer { width: 19rem; height: 80rem; position: relative;}
+
+		#scaleImage { width: 100%; height: auto; }
+
+		.note { width: 3rem; height: 3rem; }
+
+		.separate { margin-right: 0.2rem; }
+
+		#row1 { position: absolute; top: 3.4rem; }
+		#row2 { position: absolute; top: 11.8rem; }
+		#row3 { position: absolute; top: 19.8rem; }
+		#row4 { position: absolute; top: 27.4rem; }
+		#row5 { position: absolute; top: 35.0rem; }
+		#row6 { position: absolute; top: 42.2rem; }
+		#row7 { position: absolute; top: 49.0rem; }
+		#row8 { position: absolute; top: 55.5rem; }
+		#row9 { position: absolute; top: 61.6rem; }
+		#row10 { position: absolute; top: 68.0rem; }
+		#row11 { position: absolute; top: 73.8rem; }
+
+	</style>
+
+</head>
+<body>
+
+	<div class="noteDisplay flexColumn">
+
+		<div class="theIntro">Notes along guitar neck</div>
+		<div class="openStrings">Open strings</div>
+		<div class="openStrings spacing">E A D G B E</div>		
+
+		<div id="neckContainer">
+			<img id="scaleImage" class="scale" src="./image/scales/fullNeck.png" alt="A blank neck">
+
+			<div id="row1" class="flexRow">
+				<img class="note separate" src="./image/scales/dotF.png" alt="F note">
+				<img class="note separate" src="./image/scales/dotAs.png" alt="A# note">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note separate" src="./image/scales/dotGs.png" alt="G# note">
+				<img class="note separate" src="./image/scales/dotC.png" alt="C note">
+				<img class="note" src="./image/scales/dotF.png" alt="F note">
+			</div>
+			<div id="row2" class="flexRow">
+				<img class="note separate" src="./image/scales/dotFs.png" alt="F# note">
+				<img class="note separate" src="./image/scales/dotB.png" alt="B note">
+				<img class="note separate" src="./image/scales/dotG.png" alt="G note">
+				<img class="note separate" src="./image/scales/dotA.png" alt="A note">
+				<img class="note separate" src="./image/scales/dotCs.png" alt="C# note">
+				<img class="note" src="./image/scales/dotFs.png" alt="F# note">
+			</div>
+			<div id="row3" class="flexRow">
+				<img class="note separate" src="./image/scales/dotG.png" alt="G note">
+				<img class="note separate" src="./image/scales/dotC.png" alt="C note">
+				<img class="note separate" src="./image/scales/dotGs.png" alt="G# note">
+				<img class="note separate" src="./image/scales/dotAs.png" alt="A# note">
+				<img class="note separate" src="./image/scales/dotD.png" alt="D note">
+				<img class="note" src="./image/scales/dotG.png" alt="G note">
+			</div>
+			<div id="row4" class="flexRow">
+				<img class="note separate" src="./image/scales/dotGs.png" alt="G# note">
+				<img class="note separate" src="./image/scales/dotCs.png" alt="C# note">
+				<img class="note separate" src="./image/scales/dotA.png" alt="A note">
+				<img class="note separate" src="./image/scales/dotB.png" alt="B note">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note" src="./image/scales/dotGs.png" alt="G# note">
+			</div>
+			<div id="row5" class="flexRow">
+				<img class="note separate" src="./image/scales/dotA.png" alt="A note">
+				<img class="note separate" src="./image/scales/dotD.png" alt="D note">
+				<img class="note separate" src="./image/scales/dotAs.png" alt="A# note">
+				<img class="note separate" src="./image/scales/dotC.png" alt="C note">
+				<img class="note separate" src="./image/scales/dotE.png" alt="E note">
+				<img class="note" src="./image/scales/dotA.png" alt="A note">
+			</div>
+			<div id="row6" class="flexRow">
+				<img class="note separate" src="./image/scales/dotAs.png" alt="A# note">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note separate" src="./image/scales/dotB.png" alt="B note">
+				<img class="note separate" src="./image/scales/dotCs.png" alt="C# note">
+				<img class="note separate" src="./image/scales/dotF.png" alt="F note">
+				<img class="note" src="./image/scales/dotAs.png" alt="A# note">
+			</div>
+			<div id="row7" class="flexRow">
+				<img class="note separate" src="./image/scales/dotB.png" alt="B note">
+				<img class="note separate" src="./image/scales/dotE.png" alt="E note">
+				<img class="note separate" src="./image/scales/dotC.png" alt="C note">
+				<img class="note separate" src="./image/scales/dotD.png" alt="D note">
+				<img class="note separate" src="./image/scales/dotFs.png" alt="F# note">
+				<img class="note" src="./image/scales/dotB.png" alt="B note">
+			</div>
+			<div id="row8" class="flexRow">
+				<img class="note separate" src="./image/scales/dotC.png" alt="C note">
+				<img class="note separate" src="./image/scales/dotF.png" alt="F note">
+				<img class="note separate" src="./image/scales/dotCs.png" alt="C# note">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note separate" src="./image/scales/dotG.png" alt="G note">
+				<img class="note" src="./image/scales/dotC.png" alt="C note">
+			</div>
+			<div id="row9" class="flexRow">
+				<img class="note separate" src="./image/scales/dotCs.png" alt="C# note">
+				<img class="note separate" src="./image/scales/dotFs.png" alt="F# note">
+				<img class="note separate" src="./image/scales/dotD.png" alt="D note">
+				<img class="note separate" src="./image/scales/dotE.png" alt="E note">
+				<img class="note separate" src="./image/scales/dotGs.png" alt="G# note">
+				<img class="note" src="./image/scales/dotCs.png" alt="C# note">
+			</div>
+			<div id="row10" class="flexRow">
+				<img class="note separate" src="./image/scales/dotD.png" alt="D note">
+				<img class="note separate" src="./image/scales/dotG.png" alt="G note">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note separate" src="./image/scales/dotF.png" alt="F note">
+				<img class="note separate" src="./image/scales/dotA.png" alt="A note">
+				<img class="note" src="./image/scales/dotD.png" alt="D note">
+			</div>
+			<div id="row11" class="flexRow">
+				<img class="note separate" src="./image/scales/dotDs.png" alt="D# note">
+				<img class="note separate" src="./image/scales/dotGs.png" alt="G# note">
+				<img class="note separate" src="./image/scales/dotE.png" alt="E note">
+				<img class="note separate" src="./image/scales/dotFs.png" alt="F# note">
+				<img class="note separate" src="./image/scales/dotAs.png" alt="A# note">
+				<img class="note" src="./image/scales/dotDs.png" alt="D# note">
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
