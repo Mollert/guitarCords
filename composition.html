@@ -23,11 +23,17 @@
 
 		.flexRow { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; }
 
-		.theIntro { margin: 1.4rem 0 0.8rem 0; font-size: 2rem; text-decoration: underline; text-align: center; }
+		.theIntro { margin: 1rem 0 0.4rem 0; font-size: 1.8rem; text-align: center; }
+
+		.underline { text-decoration: underline; }
+
+		#trebleClef { width: 10rem; height: auto; }
+
+		.notice { font-size: 1.4rem; text-align: center; }
 
 		.noteBox { width: 10rem; height: 2rem; }
 
-		.progressionBox { width: 13rem; height: 4rem; }
+		.progressionBox { width: 15rem; height: 4rem; }
 
 		.theProgression { color: green; }
 
@@ -40,161 +46,193 @@
 
 	<div class="noteDisplay">
 
-		<div>
-			<div class="theIntro">The Notes:</div>
+		<div class="flexColumn">
+			<div class="theIntro underline">the Notes:</div>			
+			<div >A A&#9839 B C C&#9839 D D&#9839</div>
+			<div >E F F&#9839 G G&#9839</div>
+			<img id="trebleClef" src="./image/pageNotes.png" alt="Sheet Page Notes">			
+			<div class="theIntro underline">the Sharps:</div>			
+			<div >F&#9839 C&#9839 G&#9839 D&#9839 A&#9839 E&#9839 B&#9839</div>
+			<div class="notice">One half step up from last sharp listed</div>
+			<div class="notice">at the begining on the sheet music</div>
+			<div class="notice">is the key the music is in.</div>							
+			<div class="theIntro underline">the Flats:</div>
+			<div >B&#9837 E&#9837 A&#9837 D&#9837 G&#9837 C&#9837 F&#9837</div>
+		</div>
+
+		<div class="flexColumn">
+			<div class="theIntro underline">Now build a cord progression in these root keys:</div>
+			<div class="theIntro">- The key of A -</div>
+			<div class="notice">Sharps: F&#9839 C&#9839 G&#9839</div>
 			<div class="flexRow">
-				<div class="noteBox">A A# B C C# D</div>
-				<div class="noteBox">D# E F F# G G#</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">A C&#9839 E A -G&#9839 -B</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">A D E A -G&#9839 -B</div>
+				</div>
+			</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">A E F&#9839 D A -G&#9839 -B</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">B E A B -G&#9839 -B</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="theIntro">Building a cord progression:</div>
+		<div class="flexColumn">
+			<div class="theIntro">- The key of B -</div>
+			<div class="notice">Sharps: F&#9839 C&#9839 G&#9839 D&#9839 A&#9839</div>			
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 and7 and9</div>
+					<div class="theNotes">B D&#9839 F&#9839 B -A&#9839 -C&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 and7 and9</div>
+					<div class="theNotes">B E F&#9839 B -A&#9839 -C&#9839</div>
+				</div>
+			</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 and7 and9</div>
+					<div class="theNotes">B F&#9839 G&#9839 E B -A&#9839 -C&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 and7 and9</div>
+					<div class="theNotes">C&#9839 F&#9839 B C&#9839 -A&#9839 -C&#9839</div>
+				</div>
+			</div>
+		</div>
 
-		<div class="theIntro">in the key of A</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">A B C# A -D# -F</div>
+		<div class="flexColumn">
+			<div class="theIntro">- The key of C -</div>
+			<div class="notice">There are no sharps in this key</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">C E G C -B -D</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">C F G C -B -D</div>
+				</div>
 			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">A C C# A -D# -F</div>
-			</div>
-		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">A C# D C -D# -F</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">A# C# A A# -D# -F</div>
-			</div>
-		</div>
-		<div class="theIntro">in the key of B</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">B C# D# B -F -G</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">B D D# B -F -G</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">C G A F C -B -D</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">D G C D -B -D</div>
+				</div>
 			</div>
 		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">B D# E B -F -G</div>
+
+		<div class="flexColumn">
+			<div class="theIntro">- The key of D -</div>
+			<div class="notice">Sharps: F&#9839 C&#9839</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">D F&#9839 A D -C&#9839 -E</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">D G A D -C&#9839 -E</div>
+				</div>
 			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">C D# B C -F -G</div>
-			</div>
-		</div>
-		<div class="theIntro">in the key of C</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">C D E C -G -A</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">C D# E C -G -A</div>
-			</div>
-		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">C E F D# C -G -A</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">C# E C C #C -G -A</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">D A B G D -C&#9839 -E</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">E A D E -C&#9839 -E</div>
+				</div>
 			</div>
 		</div>
-		<div class="theIntro">in the key of D</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">D E F# D -G# -A#</div>
+
+		<div class="flexColumn">
+			<div class="theIntro">- The key of E -</div>
+			<div class="notice">Sharps: F&#9839 C&#9839 G&#9839 D&#9839</div>		
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">E G&#9839 B E -D&#9839 -F&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">E A B E -D&#9839 -F&#9839</div>
+				</div>
 			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">D F F# D -G# -A#</div>
-			</div>
-		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">D F# G F D -G# -A#</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">D# F# D D# -G# -A#</div>
-			</div>
-		</div>
-		<div class="theIntro">in the key of E</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">E F# G# E -A# -C</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">E G G# E -A# -C</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">E B C&#9839 A E -D&#9839 -F&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">F&#9839 B E F&#9839 -D&#9839 -F&#9839</div>
+				</div>
 			</div>
 		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">E G# A G E -A# -C</div>
+
+		<div class="flexColumn">
+			<div class="theIntro">- The key of F -</div>
+			<div class="notice">Sharps: F&#9839 C&#9839 G&#9839 D&#9839 A&#9839 E&#9839</div>		
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">F&#9839 A&#9839 C&#9839 F -E&#9839 -G&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">F&#9839 B C&#9839 F -E&#9839 -G&#9839</div>
+				</div>
 			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">F G# E F -A# -C</div>
-			</div>
-		</div>
-		<div class="theIntro">in the key of F</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">F G A F -B -C#</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">F G# A F -B -C#</div>
-			</div>
-		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">F A A# G# F -B -C#</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">F# A F F# -B -C#</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">F C&#9839 D&#9839 B F -E&#9839 -G&#9839</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">G&#9839 C&#9839 F&#9839 G&#9839 -E&#9839 -G&#9839</div>
+				</div>
 			</div>
 		</div>
-		<div class="theIntro">in the key of G</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 3 5 1 -7 -9</div>
-				<div class="theNotes">G A B G -C# -D#</div>
+
+		<div class="flexColumn">
+			<div class="theIntro">- The key of G -</div>
+			<div class="notice">Sharps: F&#9839</div>		
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 3 5 1 add7 add9</div>
+					<div class="theNotes">G B D G -F&#9839 -A</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 4 5 1 add7 add9</div>
+					<div class="theNotes">G C D G -F&#9839 -A</div>
+				</div>
 			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 4 5 1 -7 -9</div>
-				<div class="theNotes">G A# B G -C# -D#</div>
-			</div>
-		</div>
-		<div class="flexRow">
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">1 5 6 4 1 -7 -9</div>
-				<div class="theNotes">G B C A# G -C# -D#</div>
-			</div>
-			<div class="flexColumn progressionBox">
-				<div class="theProgression">2 5 1 2 -7 -9</div>
-				<div class="theNotes">G# B G G# -C# -D#</div>
+			<div class="flexRow">
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">1 5 6 4 1 add7 add9</div>
+					<div class="theNotes">G D E C G -F&#9839 -A</div>
+				</div>
+				<div class="flexColumn progressionBox">
+					<div class="theProgression">2 5 1 2 add7 add9</div>
+					<div class="theNotes">A D G A -F&#9839 -A</div>
+				</div>
 			</div>
 		</div>
 	</div>
